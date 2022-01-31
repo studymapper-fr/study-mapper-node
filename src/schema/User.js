@@ -11,10 +11,22 @@ const UserSchema = {
   lastName: DataTypes.STRING(100),
   email: DataTypes.STRING(150),
   password: DataTypes.STRING(255),
-  city: DataTypes.STRING(50),
-  state: DataTypes.STRING(50),
-  country: DataTypes.STRING(50),
-  zipCode: DataTypes.STRING(50),
+  city: {
+    type: DataTypes.STRING(50),
+    defaultValue: null,
+  },
+  state: {
+    type: DataTypes.STRING(50),
+    defaultValue: null,
+  },
+  country: {
+    type: DataTypes.STRING(50),
+    defaultValue: null,
+  },
+  zipCode: {
+    type: DataTypes.STRING(50),
+    defaultValue: null,
+  },
   active: DataTypes.BOOLEAN,
   createdAt: DataTypes.DATE,
   updatedAt: DataTypes.DATE,
