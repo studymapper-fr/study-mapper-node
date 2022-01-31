@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "root",
+    "password": "destiny88",
+    "database": "studymapper",
+    "host": "127.0.0.1",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "destiny88",
+    "database": "studymapper_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "destiny88",
+    "database": "studymapper_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

@@ -13,8 +13,7 @@
     "test": "jest --verbose",
     "test:watch": "jest --watchAll",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "prepush": "npm run lint"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Awais Kamran <awais.kamran@studymapper.com>",

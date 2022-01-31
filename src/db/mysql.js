@@ -1,15 +1,15 @@
-const Sequelize = require('sequelize');
-const { logger } = require('../utils');
+const Sequelize = require("sequelize");
+const { logger } = require("../utils");
 
 if (
-  !process.env.DB_NAME
-  || !process.env.DB_USERNAME
-  || !process.env.DB_PASSWORD
-  || !process.env.DB_HOST
-  || !process.env.DB_PORT
-  || !process.env.DB_DIALECT
+  !process.env.DB_NAME ||
+  !process.env.DB_USERNAME ||
+  !process.env.DB_PASSWORD ||
+  !process.env.DB_HOST ||
+  !process.env.DB_PORT ||
+  !process.env.DB_DIALECT
 ) {
-  logger.error('Please set MySQL ENV variables');
+  logger.error("Please set MySQL ENV variables");
   process.exit(-1);
 }
 
@@ -31,7 +31,7 @@ const sequelize = new Sequelize(
       idle: process.env.DB_CONNECTION_IDLE,
     },
     operatorsAliases: false, // to supress the deprecation warning
-  },
+  }
 );
 
 db.sequelize = sequelize;
