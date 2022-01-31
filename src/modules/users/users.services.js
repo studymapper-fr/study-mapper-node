@@ -43,7 +43,7 @@ async function loginUser({ email, password }) {
   const hashedPassword = await hashPayload(password);
 
   const res = await MySQL.sequelize.query(
-    "SELECT * FROM users WHERE email = ?",
+    "SELECT * FROM user WHERE email = ?",
     {
       type: MySQL.sequelize.QueryTypes.SELECT,
       replacements: [email],
