@@ -67,7 +67,6 @@ async function loginUser({ email, password }) {
   const accessToken = jwt.createAccessToken({
     id: res[0].id,
     email: res[0].email,
-    mobile: res[0].mobile,
     tokenType: "LoginToken",
   });
 
