@@ -23,7 +23,7 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
-    logging: process.env.DB_LOGGING !== true ? logger.log : false,
+    logging: process.env.DB_LOGGING !== true ? logger.info : false,
     benchmark: true,
     pool: {
       max: process.env.DB_POOL_MAX,

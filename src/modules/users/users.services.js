@@ -1,5 +1,6 @@
 const { MySQL } = require("../../db");
 const { hashPayload, jwt } = require("../../utils");
+const logger = require("../../utils/logger");
 
 async function createNewUser({
   email,

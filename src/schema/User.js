@@ -9,7 +9,10 @@ const UserSchema = {
   },
   firstName: DataTypes.STRING(100),
   lastName: DataTypes.STRING(100),
-  email: DataTypes.STRING(150),
+  email: {
+    type: DataTypes.STRING(150),
+    unique: true,
+  },
   password: DataTypes.STRING(255),
   city: {
     type: DataTypes.STRING(50),
@@ -27,7 +30,10 @@ const UserSchema = {
     type: DataTypes.STRING(50),
     defaultValue: null,
   },
-  active: DataTypes.BOOLEAN,
+  active: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: 1,
+  },
   createdAt: DataTypes.DATE,
   updatedAt: DataTypes.DATE,
 };
