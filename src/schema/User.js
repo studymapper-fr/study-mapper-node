@@ -1,23 +1,23 @@
-const generateSchema = function (Sequelize) {
-  return {
-    id: {
-      type: Sequelize.INTEGER(11),
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    firstName: Sequelize.STRING(100),
-    lastName: Sequelize.STRING(100),
-    email: Sequelize.STRING(150),
-    password: Sequelize.STRING(255),
-    city: Sequelize.STRING(50),
-    state: Sequelize.STRING(50),
-    country: Sequelize.STRING(50),
-    zipCode: Sequelize.STRING(50),
-    active: Sequelize.BOOLEAN,
-    createdAt: Sequelize.DATE,
-    updatedAt: Sequelize.DATE,
-  };
+const { DataTypes } = require("sequelize");
+
+const UserSchema = {
+  id: {
+    type: DataTypes.INTEGER(11),
+    allowNull: false,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  firstName: DataTypes.STRING(100),
+  lastName: DataTypes.STRING(100),
+  email: DataTypes.STRING(150),
+  password: DataTypes.STRING(255),
+  city: DataTypes.STRING(50),
+  state: DataTypes.STRING(50),
+  country: DataTypes.STRING(50),
+  zipCode: DataTypes.STRING(50),
+  active: DataTypes.BOOLEAN,
+  createdAt: DataTypes.DATE,
+  updatedAt: DataTypes.DATE,
 };
 
-module.exports = generateSchema;
+module.exports = UserSchema;

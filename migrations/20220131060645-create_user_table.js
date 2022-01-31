@@ -1,10 +1,10 @@
 "use strict";
-const generateSchema = require("../src/schema/User");
+const UserSchema = require("../src/schema/User");
 const TABLE_NAME = "user";
 
 module.exports = {
-  async up(queryInterface, Sequelize) {
-    return queryInterface.createTable(TABLE_NAME, generateSchema(Sequelize));
+  async up(queryInterface) {
+    return queryInterface.createTable(TABLE_NAME, UserSchema);
   },
 
   async down(queryInterface) {

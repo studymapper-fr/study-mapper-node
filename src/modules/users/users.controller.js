@@ -3,15 +3,15 @@ const {
   validateCreateUserRequest,
   validateChangeEmailRequest,
   validateChangePasswordRequest,
-} = require('./users.request.validators');
+} = require("./users.request.validators");
 const {
   loginUser,
   createNewUser,
   changeUserEmail,
   changeUserPassword,
-} = require('./users.services');
-const { sendResponse, handleCustomError } = require('../../utils');
-const ResponseMessages = require('../../constants/responseMessages');
+} = require("./users.services");
+const { sendResponse, handleCustomError } = require("../../utils");
+const ResponseMessages = require("../../constants/responseMessages");
 
 async function createNewUserController(req, res) {
   try {
@@ -21,7 +21,14 @@ async function createNewUserController(req, res) {
     }
 
     const {
-      email, firstName, lastName, password,
+      email,
+      firstName,
+      lastName,
+      password,
+      city,
+      state,
+      zipCode,
+      country,
     } = req.body;
 
     const data = await createNewUser({
@@ -29,6 +36,10 @@ async function createNewUserController(req, res) {
       firstName,
       lastName,
       password,
+      city,
+      state,
+      zipCode,
+      country,
     });
     return sendResponse(res, 201, { ...data }, ResponseMessages.genericSuccess);
   } catch (err) {
