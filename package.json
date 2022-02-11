@@ -12,7 +12,7 @@
     "lint": "./node_modules/.bin/eslint ./src",
     "test": "jest --verbose",
     "test:watch": "jest --watchAll",
-    "start": "node src/index.js",
+    "start": "set NODE_ENV=production &&  set NPM_CONFIG_PRODUCTION=false && node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
