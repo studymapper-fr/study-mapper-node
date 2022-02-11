@@ -15,10 +15,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "destiny88",
-    "database": "studymapper_production",
-    "host": "127.0.0.1",
+    "username": "rahatmaqsood_user",
+    "password": "welcome12@#",
+    "database": "rahatmaqsood_studymapper",
+    "host": "rahatmaqsoodclinic.com",
+    "port": "3306",
     "dialect": "mysql"
   }
 }
