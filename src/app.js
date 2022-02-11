@@ -4,9 +4,11 @@ const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
+if (process.env.NODE_ENV !== "production") {
+  const result = dotenv.config();
+  if (result.error) {
+    throw result.error;
+  }
 }
 
 const { logger } = require("./utils");
