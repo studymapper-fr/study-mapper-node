@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "rahatmaqsood_user",
-    "password": "welcome12@#",
-    "database": "rahatmaqsood_studymapper",
-    "host": "rahatmaqsoodclinic.com",
+    "username": "sql11472109",
+    "password": "CtzDjzg2ZD",
+    "database": "sql11472109",
+    "host": "sql11.freesqldatabase.com",
     "port": "3306",
     "dialect": "mysql"
   }
