@@ -1,31 +1,25 @@
 function validateLoginRequest(req) {
+  req.checkBody("email", "user email is required/invalid").isEmail().exists();
   req
-    .checkBody('email', 'user email is required/invalid')
-    .isEmail()
-    .exists();
-  req
-    .checkBody('password', 'user password is required')
+    .checkBody("password", "user password is required")
     .isLength({ min: 6 })
     .exists();
   return req.validationErrors();
 }
 
 function validateCreateUserRequest(req) {
+  req.checkBody("email", "user email is required/invalid").isEmail().exists();
   req
-    .checkBody('email', 'user email is required/invalid')
-    .isEmail()
-    .exists();
-  req
-    .checkBody('password', 'user password is required')
+    .checkBody("password", "user password is required")
     .isLength({ min: 6 })
     .exists();
   req
-    .checkBody('firstName', 'user firstName is required')
+    .checkBody("firstName", "user firstName is required")
     .isString()
     .isLength({ min: 3 })
     .exists();
   req
-    .checkBody('lastName', 'user lastName is required')
+    .checkBody("lastName", "user lastName is required")
     .isString()
     .isLength({ min: 3 })
     .exists();
@@ -34,15 +28,15 @@ function validateCreateUserRequest(req) {
 
 function validateChangeEmailRequest(req) {
   req
-    .checkBody('oldEmail', 'user oldEmail is required/invalid')
+    .checkBody("oldEmail", "user oldEmail is required/invalid")
     .isEmail()
     .exists();
   req
-    .checkBody('newEmail', 'user newEmail is required/invalid')
+    .checkBody("newEmail", "user newEmail is required/invalid")
     .isEmail()
     .exists();
   req
-    .checkBody('password', 'user password is required')
+    .checkBody("password", "user password is required")
     .isLength({ min: 6 })
     .exists();
   return req.validationErrors();
@@ -50,11 +44,11 @@ function validateChangeEmailRequest(req) {
 
 function validateChangePasswordRequest(req) {
   req
-    .checkBody('oldPassword', 'user oldPassword is required')
+    .checkBody("oldPassword", "user oldPassword is required")
     .isLength({ min: 6 })
     .exists();
   req
-    .checkBody('newPassword', 'user newPassword is required')
+    .checkBody("newPassword", "user newPassword is required")
     .isLength({ min: 6 })
     .exists();
   return req.validationErrors();
