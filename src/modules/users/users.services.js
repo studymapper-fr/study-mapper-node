@@ -87,8 +87,6 @@ async function changeUserPassword({ userId, oldPassword, newPassword }) {
     replacements: [userId],
   });
 
-  // console.log('---res ---', res);
-
   if (!res[0]) {
     const msg = "User not found in records";
     const err = new Error(msg);

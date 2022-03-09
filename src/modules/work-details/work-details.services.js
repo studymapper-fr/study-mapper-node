@@ -7,7 +7,6 @@ async function getUserWorkDetails({ userId }) {
       userId,
     },
   });
-  console.log(res);
   return res;
 }
 

@@ -1,11 +1,13 @@
 const { sequelize } = require("../db/mysql");
 const WorkDetailSchema = require("../schema/WorkDetail");
-const user = require("../models/User");
+const { User } = require("../models/User");
+const { WORK_DETAIL } = require("../constants/database-table-names");
 
 const WorkDetail = sequelize.define("WorkDetail", WorkDetailSchema, {
-  tableName: "user-work-detail",
+  tableName: WORK_DETAIL,
   timestamps: false,
 });
-//WorkDetail.belongsTo(user);
+
+WorkDetail.belongsTo(User);
 
 module.exports = { WorkDetail, WorkDetailSchema };
