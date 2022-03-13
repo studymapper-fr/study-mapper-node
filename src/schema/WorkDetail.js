@@ -18,7 +18,7 @@ const WorkDetailSchema = {
   },
   title: DataTypes.STRING(100),
   description: DataTypes.STRING(255),
-  Employer: DataTypes.STRING(100),
+  employer: DataTypes.STRING(100),
   city: {
     type: DataTypes.STRING(50),
     defaultValue: null,
