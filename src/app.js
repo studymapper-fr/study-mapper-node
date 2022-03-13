@@ -36,14 +36,16 @@ app.get("/", (req, res) => {
   });
 });
 
-MySQL.sequelize
-  .sync()
-  .then(() => {
-    app.listen(PORT, () =>
-      logger.info(`App running at http://localhost:${PORT}`)
-    );
-  })
-  .catch((err) => logger.log("error", err));
+// MySQL.sequelize
+//   .sync()
+//   .then(() => {
+//     app.listen(PORT, () =>
+//       logger.info(`App running at http://localhost:${PORT}`)
+//     );
+//   })
+//   .catch((err) => logger.log("error", err));
+
+app.listen(PORT, () => logger.info(`App running at http://localhost:${PORT}`));
 
 app.use(allRoutes);
 

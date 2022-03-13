@@ -60,6 +60,7 @@ async function loginUserController(req, res) {
       email,
       password,
     });
+
     return sendResponse(res, 200, { ...data }, ResponseMessages.genericSuccess);
   } catch (err) {
     return handleCustomError(res, err);
